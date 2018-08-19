@@ -1,10 +1,10 @@
 import responses
 
-from nonprofit_app import nonprofit_config, collect_html_content, collect_needs_from_html
+from nonprofit_app import nonprofits, collect_html_content, collect_needs_from_html
 
 
 def test_nonprofit_config_keys():
-    for config in nonprofit_config:
+    for config in nonprofits:
         assert all(key in config for key in ('name', 'host', 'need_endpoint', 'css_selector'))
 
 

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for nonprofit in nonprofits %}
+        <h1>Nonprofit: {{ nonprofit.name }}</h1>
+        <p>Host: {{ nonprofit.host }} at {{ nonprofit.need_endpoint }}</p>
+
+        {% for food in food_list %}
+            <li>{{ food }}</li>
+        {% endfor %}
+
+    {% endfor %}
+{% endblock content %}
